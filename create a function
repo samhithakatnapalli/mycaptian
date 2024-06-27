@@ -1,0 +1,25 @@
+def most_frequent(string):
+    # Convert string to lowercase to treat 'A' and 'a' as the same
+    string = string.lower()
+    
+    # Initialize an empty dictionary to store frequencies
+    freq = {}
+    
+    # Iterate through each character in the string
+    for char in string:
+        # Increment the count of the character in the dictionary
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    
+    # Sort the dictionary by values (frequencies) in descending order
+    sorted_freq = sorted(freq.items(), key=lambda x: x[1], reverse=True)
+    
+    # Print the sorted frequencies in the specified format
+    for char, count in sorted_freq:
+        print(f"{char} = {count:02}")
+
+# Example usage:
+input_string = "Mississippi"
+most_frequent(input_string)
