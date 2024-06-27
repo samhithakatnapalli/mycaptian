@@ -1,0 +1,13 @@
+def find_positive_numbers(nums):
+    positive_nums = [num for num in nums if num > 0]
+    return positive_nums
+
+# Example usage:
+list1 = [12, -7, 5, 64, -14]
+list2 = [12, 14, -95, 3]
+
+output1 = find_positive_numbers(list1)
+output2 = find_positive_numbers(list2)
+
+print("Input: list1 =", list1, "Output:", output1)
+print("Input: list2 =", list2, "Output:", output2)
